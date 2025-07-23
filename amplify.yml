@@ -3,12 +3,9 @@ frontend:
   phases:
     preBuild:
       commands:
-        - echo "Using npm instead of pnpm"
-        - npm --version
         - npm ci
     build:
       commands:
-        - echo "Building with npm"
         - npm run build
   artifacts:
     baseDirectory: .next
