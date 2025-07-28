@@ -14,7 +14,7 @@ export function SignupForm() {
   const [isLoading, setIsLoading] = useState(false)
   const [showConfirmation, setShowConfirmation] = useState(false)
   const [formData, setFormData] = useState({
-    name: '',
+    name: 'alamin',
     email: '',
     password: '',
     confirmationCode: '',

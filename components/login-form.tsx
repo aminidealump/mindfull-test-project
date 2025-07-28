@@ -30,13 +30,19 @@ export function LoginForm() {
     event.preventDefault()
     setIsLoading(true)
 
+    console.log('Form data:', formData)
+
     try {
       // Cognito sign in with new API
       const { isSignedIn } = await signIn({
-        username: formData.email,
+        username: formData.email.toLowerCase(),
         password: formData.password
       })
       
+
+      console.log('Sign in result:', isSignedIn)
+
+
       if (isSignedIn) {
         // Get the current user and session
         const user = await getCurrentUser()
